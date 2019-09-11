@@ -1,0 +1,23 @@
+<template>
+    <h1>Org</h1>
+    <div class="org">
+        <slot class="hide" onslotchange={handleSlotChange}></slot>
+        <template if:true={people.length}>
+            <!-- Loop through all the people in the org -->
+            <template for:each={people} for:item="person">
+                <!-- Render the root node of the org -->
+                <ul key={person.key}>
+                    <div>
+                        <li class="name">
+                            <div slot="name" class="name">{person.name}</div>
+                            <div slot="title" class="title">{person.title}</div>
+                        </li>
+                    </div>
+                    <!-- Render direct reports for the root node -->
+                    <!-- <c-reports reports={person.reports}>
+                </c-reports> -->
+                </ul>
+            </template>
+        </template>
+    </div>
+</template>

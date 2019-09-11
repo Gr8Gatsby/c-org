@@ -7,9 +7,9 @@
 // https://github.com/trailheadapps/lwc-recipes-oss
 
 import { createElement } from 'lwc';
-import MyApp from 'my/app';
+import MyApp from 'c/app';
 
-describe('my-app', () => {
+describe('c-app', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {
@@ -18,7 +18,7 @@ describe('my-app', () => {
     });
 
     it('contains a link to the LWC documentation with target set to _blank', () => {
-        const element = createElement('my-app', {
+        const element = createElement('c-app', {
             is: MyApp
         });
         document.body.appendChild(element);
@@ -30,7 +30,7 @@ describe('my-app', () => {
     });
 
     it('contains a link to the LWC documentation with https://', () => {
-        const element = createElement('my-app', {
+        const element = createElement('c-app', {
             is: MyApp
         });
         document.body.appendChild(element);
@@ -42,7 +42,7 @@ describe('my-app', () => {
     });
 
     it('contains one active custom element my-greeting', () => {
-        const element = createElement('my-app', {
+        const element = createElement('c-app', {
             is: MyApp
         });
         document.body.appendChild(element);
