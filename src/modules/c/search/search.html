@@ -1,5 +1,9 @@
 <template>
-    <input type="text" oninput={handleInputEvent} onchange={handleChangeEvent} />
+    <input
+        type="text"
+        oninput={handleInputEvent}
+        onchange={handleChangeEvent}
+    />
 
     <template if:true={suggest}>
         <template for:each={suggest} for:item="suggestion">
