@@ -1,6 +1,6 @@
 <template>
     <h1>Org</h1>
-    <c-search onsearch={handleSearchEvent}></c-search>
+    <c-search onsearch={handleSearchEvent} auto-suggest-data={autoSuggestData}></c-search>
     <div class="org">
         <slot class="hide" onslotchange={handleSlotChange}></slot>
         <template if:true={people.length}>

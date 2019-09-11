@@ -4,11 +4,13 @@ import Tree from 'c/tree';
 export default class Org extends LightningElement {
     tree = new Tree();
     @track people = [];
+    @track autoSuggestData = [];
 
     handleSlotChange() {
         const people = this.querySelectorAll('c-person');
 
         if (people.length > 0) {
+            this.autoSuggestData = people;
             this.tree = new Tree();
 
             people.forEach(person =>
