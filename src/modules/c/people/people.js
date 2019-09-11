@@ -4,6 +4,6 @@ export default class People extends LightningElement {
     @api people;
 
     connectedCallback() {
-        window.console.log(this.people);
+        // window.console.log(this.people);
     }
 }
