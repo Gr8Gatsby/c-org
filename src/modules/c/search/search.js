@@ -13,11 +13,6 @@ export default class Search extends LightningElement {
     @api autoSuggestData;
     @track suggest = [];
 
-    // var filteredObj = Object.keys(obj).reduce((p, c) => {
-    //     if (obj[c]) p[c] = obj[c];
-    //     return p;
-    //   }, {});
-
     handleInputEvent(evt) {
         let lowerCaseSearch = evt.target.value.toLowerCase();
         let suggestions = [];
