@@ -14,11 +14,16 @@ export default class Search extends LightningElement {
     }
 
     handleChangeEvent(evt) {
-        window.console.log('Current search string is ' + evt.target.value);
+        let searchString = evt.target.value;
         // check if minimum search length is met
-        if (evt.target.value.length >= this.minCharsToSearch) {
+        if (searchString.length >= this.minCharsToSearch) {
             // fires search event
-            window.console.log('Fire Search event');
+            const searchEvent = new CustomEvent('search', {
+                detail: searchString
+            });
+
+            // Dispatches the event.
+            this.dispatchEvent(searchEvent);
         }
     }
 }

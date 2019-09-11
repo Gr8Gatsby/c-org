@@ -24,4 +24,8 @@ export default class Org extends LightningElement {
             this.people = this.tree._generatedOrg;
         }
     }
+
+    handleSearchEvent(evt) {
+        window.console.log('Search event received with ' + evt.detail);
+    }
 }
