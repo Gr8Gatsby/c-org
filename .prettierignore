@@ -4,3 +4,4 @@
 
 .sfdx
 .localdevserver
+**/lwc/jsconfig.json

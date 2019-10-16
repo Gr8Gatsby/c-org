@@ -2,12 +2,12 @@
 # If you are not using git, you can delete this file. For more information see: https://git-scm.com/docs/gitignore
 # For useful gitignore templates see: https://github.com/github/gitignore
 
-# VSCode Settings (BUG: https://github.com/forcedotcom/salesforcedx-vscode/issues/1394)
-.vscode/settings.json
-
 # Salesforce cache
 .sfdx/
 .localdevserver/
+
+# LWC VSCode autocomplete
+jsconfig.json
 
 # Logs
 logs
@@ -30,3 +30,6 @@ Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
+
+# VS Code project settings
+.vscode/
