@@ -5,6 +5,8 @@
   "author": "Kevin Hill",
   "bugs": "https://github.com/Gr8Gatsby/c-org/issues",
   "devDependencies": {
+    "@salesforce/eslint-config-lwc": "^0.4.0",
+    "eslint": "^6.5.1",
     "husky": "^2.3",
     "lint-staged": "^8.1.5",
     "prettier": "^1.18.2"
