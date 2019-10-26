@@ -1,52 +1,44 @@
 {
-    "name": "c-org",
-    "description": "A sample solution to the c-org excercise",
-    "version": "0.0.1",
-    "author": "Kevin Hill",
-    "bugs": "https://github.com/https://github.com/Gr8Gatsby/https://github.com/Gr8Gatsby/c-org/issues",
-    "dependencies": {
-        "lwc-services": "^1"
-    },
-    "devDependencies": {
-        "husky": "^2.3",
-        "lint-staged": "^8.1.5"
-    },
-    "engines": {
-        "node": ">=10.0.0"
-    },
-    "homepage": "https://github.com/https://github.com/Gr8Gatsby/https://github.com/Gr8Gatsby/c-org",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "keywords": [
-        "lwc"
-    ],
-    "license": "MIT",
-    "lint-staged": {
-        "**/*.{css,html,js,json,md,yaml,yml}": [
-            "prettier --write"
-        ],
-        "**/modules/**/*.js": [
-            "eslint"
-        ],
-        "*": [
-            "git add"
-        ]
-    },
-    "repository": "https://github.com/Gr8Gatsby/https://github.com/Gr8Gatsby/c-org",
-    "scripts": {
-        "build": "lwc-services build -m production",
-        "build:development": "lwc-services build",
-        "lint": "eslint ./src/**/*.js",
-        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
-        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
-        "serve": "lwc-services serve",
-        "test:unit": "lwc-services test",
-        "test:unit:coverage": "lwc-services test --coverage",
-        "test:unit:debug": "lwc-services test --debug",
-        "test:unit:watch": "lwc-services test --watch",
-        "watch": "lwc-services watch"
+  "name": "c-org",
+  "description": "A sample solution to the c-org excercise",
+  "version": "0.0.1",
+  "author": "Kevin Hill",
+  "bugs": "https://github.com/Gr8Gatsby/c-org/issues",
+  "devDependencies": {
+    "@salesforce/eslint-config-lwc": "^0.4.0",
+    "eslint": "^6.5.1",
+    "husky": "^2.3",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "homepage": "https://github.com/Gr8Gatsby/c-org",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "keywords": [
+    "lwc"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "**/*.{css,html,js,json,md,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/modules/**/*.js": [
+      "eslint"
+    ],
+    "*": [
+      "git add"
+    ]
+  },
+  "repository": "https://github.com/Gr8Gatsby/c-org",
+  "scripts": {
+    "lint": "eslint ./src/**/*.js",
+    "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
+    "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'"
+  }
 }
